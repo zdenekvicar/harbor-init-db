@@ -1,6 +1,6 @@
 # harbor-init-db
 
-Created for [https://github.com/goharbor/harbor/tree/release-1.6.0](harbor release-1.6.0) and [https://github.com/goharbor/harbor-helm/tree/0.3.0](harbor-helm v0.3.0)
+Created for [harbor release-1.6.0](https://github.com/goharbor/harbor/tree/release-1.6.0) and [harbor-helm v0.3.0](https://github.com/goharbor/harbor-helm/tree/0.3.0).
 
 Image was created to perform initial DB setup for usage in harbor. It connects to PostgreSQL database and creates required databases:
 - registry
