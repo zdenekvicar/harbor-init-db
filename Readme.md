@@ -27,7 +27,7 @@ metadata:
 name: harbor-init-db
 spec:
 containers:
-- image: zdenekvicar/harbor-init-db:v0.2
+- image: zdenekvicar/harbor-init-db:v1.6.0
     name: harbor-init-db
     env:
     - name: PSQL_PASSWD
