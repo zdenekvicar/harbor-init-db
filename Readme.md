@@ -21,21 +21,23 @@ Once started, container executes run.sh script, which will run 4 init sql script
 For usage in kubernetes world, you can use example harbor-init-db.yml
 
 ```YAML
+---
 apiVersion: v1
 kind: Pod
 metadata:
-name: harbor-init-db
+  name: harbor-init-db
+  namespace: harbor-init-db #ns has to be created before, or changed to existing one
 spec:
-containers:
-- image: zdenekvicar/harbor-init-db:v1.6.0
+  containers:
+  - image: zdenekvicar/harbor-init-db:v1.6.0
     name: harbor-init-db
     env:
     - name: PSQL_PASSWD
-    value: {database password}
+      value: {database password}
     - name: PSQL_DBNAME
-    value: {initial database to connect to, i.e. 'postgres'}
+      value: {initial database to connect to, i.e. 'postgres'}
     - name: PSQL_DBHOST
-    value: {databse hostname}
+      value: {databse hostname}
     - name: PSQL_USERNAME
-    value: {database username}
+      value: {database username}
 ```
